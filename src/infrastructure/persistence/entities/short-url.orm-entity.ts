@@ -1,8 +1,9 @@
-import { Entity, Column, PrimaryColumn } from 'typeorm';
+import { Entity, Column, PrimaryColumn, Index } from 'typeorm';
 
 @Entity('short_urls')
 export class ShortURLOrmEntity {
   @PrimaryColumn({ unique: true })
+  @Index()
   shortCode: string;
 
   @Column()

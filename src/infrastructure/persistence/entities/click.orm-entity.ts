@@ -1,4 +1,4 @@
-import { Entity, Column, PrimaryColumn } from 'typeorm';
+import { Entity, Column, PrimaryColumn, Index } from 'typeorm';
 
 @Entity('clicks')
 export class ClickOrmEntity {
@@ -6,6 +6,7 @@ export class ClickOrmEntity {
   id: string;
 
   @Column()
+  @Index()
   shortUrlCode: string;
 
   @Column()
